@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>CODE DRAW</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- FONT AWSOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- html2pdf cdn -->
+    <script src="scripts/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="colors-menu">
+            <img src="assets/color-bars.svg" alt="colors-menu-icon" class="colors-menu-icon">
+            <p class="colors-p">colors</p>
+        </div>
+        <div class="colors-pallete-sidebar">
+            <p class="colors-pallete-p sidebars-p">colors pallete</p>
+            <div class="colors-pallete-grid">
+                <input type="button" value="#AA3529" class="color-option color-option1"></input>
+                <input type="button" value="#E93131" class="color-option color-option2"></input>
+                <input type="button" value="#FE9923" class="color-option color-option3"></input>
+                <input type="button" value="#FFF500" class="color-option color-option4"></input>
+                <input type="button" value="#6550E2" class="color-option color-option5"></input>
+                <input type="button" value="#206B96" class="color-option color-option6"></input>
+                <input type="button" value="#5079E2" class="color-option color-option7"></input>
+                <input type="button" value="#68E1FD" class="color-option color-option8"></input>
+                <input type="button" value="#178C31" class="color-option color-option9"></input>
+                <input type="button" value="#94D75B" class="color-option color-option10"></input>
+                <input type="button" value="#D2E364" class="color-option color-option11"></input>
+                <input type="button" value="#02F59E" class="color-option color-option12"></input>
+                <input type="button" value="#000" class="color-option color-option13"></input>
+                <input type="button" value="#C4C4C4" class="color-option color-option14"></input>
+                <input type="button" value="#C7752D" class="color-option color-option15"></input>
+                <input type="button" value="#DDA860" class="color-option color-option16"></input>
+                <input type="button" value="#D63E63" class="color-option color-option17"></input>
+                <input type="button" value="#FE0098" class="color-option color-option18"></input>
+                <input type="button" value="#FE63F8" class="color-option color-option19"></input>
+                <input type="button" value="#FFCFCF" class="color-option color-option20"></input>
+            </div>
+            <div class="eraser-btn" id="eraser">
+                <svg width="74" height="71" viewBox="0 0 74 71" fill="none" xmlns="http://www.w3.org/2000/svg" class="eraser-btn-icon">
+                    <rect x="51.7585" y="0.706954" width="29" height="39" transform="rotate(43.8097 51.7585 0.706954)" stroke="#4D4D4D"/>
+                    <rect x="49.1152" y="60.6595" width="7" height="7" transform="rotate(66.1543 49.1152 60.6595)" stroke="#4D4D4D"/>
+                    <rect x="55.2752" y="47.4394" width="7" height="7" transform="rotate(32.7086 55.2752 47.4394)" stroke="#4D4D4D"/>
+                    <rect x="5.52663" y="53.6909" width="7" height="7" transform="rotate(32.7086 5.52663 53.6909)" stroke="#4D4D4D"/>
+                    <rect x="6.39156" y="33.6443" width="7" height="7" transform="rotate(54.4325 6.39156 33.6443)" stroke="#4D4D4D"/>
+                    <path d="M21.9132 32.707L42.8409 52.7826L36.2644 59.6383C32.6323 63.4245 26.6185 63.5495 22.8323 59.9173L15.6158 52.9947C11.8296 49.3626 11.7046 43.3488 15.3367 39.5626L21.9132 32.707Z" stroke="#4D4D4D"/>
+                </svg>
+                <p class="eraser-p">Eraser</p>
+            </div>
+            <div class="delete-all">
+                <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg" class="delete-all-icon">
+                    <g clip-path="url(#clip0)">
+                    <path d="M37.6382 21.3757C36.875 21.3757 36.2565 21.9943 36.2565 22.7575V48.8722C36.2565 49.6349 36.875 50.2539 37.6382 50.2539C38.4014 50.2539 39.0199 49.6349 39.0199 48.8722V22.7575C39.0199 21.9943 38.4014 21.3757 37.6382 21.3757Z" fill="#4D4D4D"/>
+                    <path d="M21.3338 21.3757C20.5706 21.3757 19.952 21.9943 19.952 22.7575V48.8722C19.952 49.6349 20.5706 50.2539 21.3338 50.2539C22.097 50.2539 22.7155 49.6349 22.7155 48.8722V22.7575C22.7155 21.9943 22.097 21.3757 21.3338 21.3757Z" fill="#4D4D4D"/>
+                    <path d="M9.45095 17.5646V51.6075C9.45095 53.6196 10.1888 55.5093 11.4777 56.8651C12.7606 58.2247 14.5461 58.9965 16.4146 58.9998H42.5574C44.4265 58.9965 46.2119 58.2247 47.4944 56.8651C48.7833 55.5093 49.5211 53.6196 49.5211 51.6075V17.5646C52.0832 16.8846 53.7434 14.4093 53.4007 11.7803C53.0574 9.15173 50.8181 7.18547 48.1669 7.18493H41.0925V5.45777C41.1006 4.00533 40.5263 2.61065 39.4981 1.58461C38.4699 0.559106 37.0731 -0.0119368 35.6207 -6.25928e-05H23.3514C21.8989 -0.0119368 20.5021 0.559106 19.4739 1.58461C18.4457 2.61065 17.8714 4.00533 17.8795 5.45777V7.18493H10.8051C8.15396 7.18547 5.91458 9.15173 5.57131 11.7803C5.22858 14.4093 6.88881 16.8846 9.45095 17.5646V17.5646ZM42.5574 56.2363H16.4146C14.0522 56.2363 12.2144 54.2069 12.2144 51.6075V17.6861H46.7576V51.6075C46.7576 54.2069 44.9198 56.2363 42.5574 56.2363ZM20.6429 5.45777C20.6338 4.73829 20.9166 4.04581 21.4272 3.53792C21.9372 3.03003 22.6313 2.75098 23.3514 2.76339H35.6207C36.3407 2.75098 37.0348 3.03003 37.5448 3.53792C38.0554 4.04527 38.3382 4.73829 38.3291 5.45777V7.18493H20.6429V5.45777ZM10.8051 9.94838H48.1669C49.5405 9.94838 50.654 11.0619 50.654 12.4355C50.654 13.8091 49.5405 14.9226 48.1669 14.9226H10.8051C9.43152 14.9226 8.31804 13.8091 8.31804 12.4355C8.31804 11.0619 9.43152 9.94838 10.8051 9.94838V9.94838Z" fill="#4D4D4D"/>
+                    <path d="M29.486 21.3757C28.7228 21.3757 28.1042 21.9943 28.1042 22.7575V48.8722C28.1042 49.6349 28.7228 50.2539 29.486 50.2539C30.2492 50.2539 30.8677 49.6349 30.8677 48.8722V22.7575C30.8677 21.9943 30.2492 21.3757 29.486 21.3757Z" fill="#4D4D4D"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="59" height="59" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>                    
+                <p class="delete-all-p">DELETE ALL</p>
+            </div>
+        </div>
+        <h1 class="header-title">CODE DRAW</h1>
+        <div class="pixels-menu">
+            <p class="pixels-p">pixels</p>
+            <svg class="pixels-menu-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="10" height="10" fill="#4D4D4D"/>
+                <rect x="10" y="10" width="10" height="10" fill="#4D4D4D"/>
+                <rect x="20" width="10" height="10" fill="#4D4D4D"/>
+                <rect x="20" y="20" width="10" height="10" fill="#4D4D4D"/>
+                <rect y="20" width="10" height="10" fill="#4D4D4D"/>
+            </svg>
+        </div>
+        <div class="pixels-sidebar">
+            <p class="pixels-sidebar-p sidebars-p">pixel grid</p>
+            <div class="pixels-options">
+                <div class="pixel-option pixel-option1" id="pixel-option">100px</div>
+                <div class="pixel-option pixel-option2" id="pixel-option">200px</div>
+                <div class="pixel-option pixel-option3" id="pixel-option">400px</div>
+                <div class="pixel-option pixel-option3" id="pixel-option">800px</div>
+            </div>
+        </div>
+    </header>
+    <section class="drawing-section"></section>
+
+    <div class="eraser-btn-fixed">
+        <img src="assets/Eraser-small.png" alt="eraser btn">
+    </div>
+
+    <div class="save-btn">
+        <p class="save-p">Save Draw</p>
+    </div>
+
+    <footer class="footer">
+        <p class="credits footer-p">Creado por Daniel Sun</p>
+        <p class="copyright footer-p">Todos los derechos reservados &copy;2021-2031</p>
+    </footer>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/pdfConvertion.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
