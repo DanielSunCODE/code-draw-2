@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     $saveBtn.addEventListener('click', ()=>{
         colorsSidebar.style.display = 'none';
         pixelsSidebar.style.display = 'none';
+        eraserBtn.style.display = 'none';
         const $elementoParaConvertir = document.body;
         html2pdf()
         .set({
@@ -27,10 +28,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         .from($elementoParaConvertir)
         .save()
         .catch(err => console.log(err));
-        alert('Ha sido guardado');
         setTimeout(()=>{
             colorsSidebar.style.display = 'block';
             pixelsSidebar.style.display = 'block';
+            eraserBtn.style.display = 'flex';
         }, 150)
+        alert('Ha sido guardado');
     });
 });
